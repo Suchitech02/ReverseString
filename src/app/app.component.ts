@@ -2,9 +2,15 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
+  template: `
+  <input type = "text" [(ngModel)] = "user" />
+
+
+{{user | Reverse}}
+  `,
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  user: string = "abc" ;
   title = 'ReverseString';
 }
